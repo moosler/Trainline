@@ -11,27 +11,32 @@ const _width = app.renderer.view.width;
 const _height = app.renderer.view.height;
 
 let grid = new Grid(_width, _height, 10, 10);
+app.stage.addChild(grid.drawGrid());
 
-// app.stage.addChild(grid.drawGrid());
+grid.setTile(0, 0);
+grid.setTile(5, 5);
+grid.setTile(5, 6);
+grid.setTile(5, 7);
+grid.setTile(2, 4, "railH");
+grid.setTile(3, 4, "railH");
+grid.setTile(4, 4, "railH");
+grid.setTile(5, 4, "curveSW");
+grid.setTile(1, 4, "curveNE");
+grid.setTile(1, 3, "railV");
+grid.setTile(1, 2, "curveSW");
+grid.setTile(0, 2, "curveNE");
+grid.setTile(0, 1, "railV");
 
-// grid.setTile(0, 0);
-// app.stage.addChild(grid.drawElement(0, 0));
+let tiles = grid.getAllTiles();
+app.stage.addChild(tiles);
 
-let style = {
-  color: "0xff0000",
-  width: 10,
-  alpha: 1
-};
-let pos = {};
-const container = new PIXI.Container();
+/**Train */
+let pos = grid.getMidpoint(5, 7);
+let train = new Train({ x: pos.x, y: pos.y, r: grid.xWidth / 4 });
+app.stage.addChild(train.container);
 
-pos.y1 = 10;
-pos.x2 = 100;
-pos.x1 = 10;
-pos.y2 = 100;
-var line = drawLine(pos, style);
-container.addChild(line);
-
-app.stage.addChild(container);
+app.ticker.add(delta => {
+  train.container.y -= 1 * delta;
+});
 
 console.log(grid);
