@@ -1,0 +1,27 @@
+{
+  "name": "trainline",
+  "version": "1.0.0",
+  "description": "simple train Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moosler/Trainline.git"
+  },
+  "keywords": [
+    "Train",
+    "Game",
+    "Pixi"
+  ],
+  "author": "moosler@gmx.de",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moosler/Trainline/issues"
+  },
+  "homepage": "https://github.com/moosler/Trainline#readme",
+  "dependencies": {
+    "pixi.js": "^5.2.1"
+  }
+}
