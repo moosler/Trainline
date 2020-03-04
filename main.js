@@ -10,25 +10,9 @@ document.body.appendChild(app.view);
 const _width = app.renderer.view.width;
 const _height = app.renderer.view.height;
 
-let grid = new Grid(_width, _height, 10, 10);
-app.stage.addChild(grid.drawGrid());
+let game = new Game(_width, _height, app);
+game.start();
 
-grid.setTile(0, 0);
-grid.setTile(5, 6);
-grid.setTile(5, 7);
-grid.setTile(2, 4, "railH");
-grid.setTile(3, 4, "railH");
-grid.setTile(4, 4, "railH");
-grid.setTile(5, 4, "curveSW");
-grid.setTile(5, 5);
-grid.setTile(1, 4, "curveNE");
-grid.setTile(1, 3, "railV");
-grid.setTile(1, 2, "curveSW");
-grid.setTile(0, 2, "curveNE");
-grid.setTile(0, 1, "railV");
-
-let tiles = grid.getAllTiles();
-app.stage.addChild(tiles);
 
 /**Train */
 // let pos = grid.getMidpoint(5, 7);
@@ -40,4 +24,3 @@ app.stage.addChild(tiles);
 //   train.container.y -= 1 * delta;
 // });
 
-console.log(grid);
