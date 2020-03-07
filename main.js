@@ -17,10 +17,16 @@ const _height = 500;
 let game = new Game(_width, _height, app);
 game.start();
 var tween = game.tween;
-
+var ticker = game.app.ticker;
 document.querySelector("body").onload = function() {
-  document.querySelector("#play").onclick = () => tween.play();
-  document.querySelector("#pause").onclick = () => tween.pause();
+  (document.querySelector("#play").onclick = () => {
+    // tween.play();
+    ticker.start();
+  }),
+    (document.querySelector("#pause").onclick = () => {
+      // tween.pause()
+      ticker.stop();
+    });
   document.querySelector("#resume").onclick = () => tween.resume();
   document.querySelector("#reverse").onclick = () => tween.reverse();
   document.querySelector("#restart").onclick = () => tween.restart();
