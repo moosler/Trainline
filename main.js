@@ -34,7 +34,12 @@ document.querySelector("body").onload = function() {
       // tween.pause()
       ticker.stop();
     });
-  // document.querySelector("#resume").onclick = () => tween.resume();
+    (document.querySelector("#step").onclick = () => {
+      // tween.resume()
+      ticker.stop();
+      ticker.update();
+      ticker.stop();
+    });
   // document.querySelector("#reverse").onclick = () => tween.reverse();
   // document.querySelector("#restart").onclick = () => tween.restart();
 };
