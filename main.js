@@ -34,12 +34,22 @@ document.querySelector("body").onload = function() {
       // tween.pause()
       ticker.stop();
     });
-    (document.querySelector("#step").onclick = () => {
-      // tween.resume()
-      ticker.stop();
+  document.querySelector("#step").onclick = () => {
+    // tween.resume()
+    ticker.stop();
+    ticker.update();
+    ticker.stop();
+  };
+  document.querySelector("#step10").onclick = () => {
+    // tween.reverse()
+    ticker.stop();
+    for (let i = 0; i < 10; i++) {
       ticker.update();
-      ticker.stop();
-    });
-  // document.querySelector("#reverse").onclick = () => tween.reverse();
-  // document.querySelector("#restart").onclick = () => tween.restart();
+    }
+    ticker.stop();
+  };
+  document.querySelector("#restart").onclick = () => {
+    // tween.restart()
+    game.restart()
+  };
 };
