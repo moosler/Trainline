@@ -1,28 +1,34 @@
 // gsap.registerPlugin(MotionPathPlugin);
 
+
+const _width = 800;
+const _height = 500;
+
+
 const app = new PIXI.Application({
-  width: 800,
-  height: 500,
+  width: _width,
+  height: _height,
   antialias: true,
   backgroundColor: 0xeeeeee,
   resolution: window.devicePixelRatio || 1
 });
 document.body.appendChild(app.view);
-
-// const _width = app.renderer.view.width;
-// const _height = app.renderer.view.height;
-const _width = 800;
-const _height = 500;
-
-let game = new Game(_width, _height, app);
+let tiles = {x: 10, y: 10}
+let game = new Game(_width, _height, app, tiles);
 
 game.start();
 
 var ticker = game.app.ticker;
 
-/**global function */
+/**global functions */
 function updateRoute(tile) {
-  game.track.updateRoute(tile);
+  game.track.updateRoute(tile, game.selection);
+}
+
+function setSelection(index) {
+  let val = MENU_NAMES_RIGHT[index]
+  game.menus[2].updateMenu(0, val, false);
+  game.selection = index
 }
 
 document.querySelector("body").onload = function() {
