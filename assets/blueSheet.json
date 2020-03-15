@@ -1,0 +1,71 @@
+{
+    "frames": {
+        "boxCheckmark.png": {
+            "frame": {
+                "x": 380,
+                "y": 36,
+                "w": 38,
+                "h": 36
+            },
+            "rotated": false,
+            "trimmed": false,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        "button00.png": {
+            "frame": {
+                "x": 0,
+                "y": 94,
+                "w": 190,
+                "h": 49
+            },
+            "rotated": false,
+            "trimmed": false,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        "button01.png": {
+            "frame": {
+                "x": 190,
+                "y": 49,
+                "w": 190,
+                "h": 49
+            },
+            "rotated": false,
+            "trimmed": false,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        "blue_button13.png": {
+            "frame": {
+                "x": 0,
+                "y": 143,
+                "w": 190,
+                "h": 49
+            },
+            "rotated": false,
+            "trimmed": false,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    },
+    "meta": {
+        "app": "http://www.codeandweb.com/texturepacker",
+        "version": "1.0",
+        "image": "blueSheet.png",
+        "format": "RGBA8888",
+        "size": {
+            "w": 260,
+            "h": 260
+        },
+        "scale": "1"
+    }
+}
