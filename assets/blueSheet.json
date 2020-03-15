@@ -14,6 +14,34 @@
                 "y": 0.5
             }
         },
+        "boxCross.png": {
+            "frame": {
+                "x": 380,
+                "y": 36,
+                "w": 38,
+                "h": 36
+            },
+            "rotated": false,
+            "trimmed": false,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        "boxTick.png": {
+            "frame": {
+                "x": 386,
+                "y": 210,
+                "w": 36,
+                "h": 36
+            },
+            "rotated": false,
+            "trimmed": false,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
         "button00.png": {
             "frame": {
                 "x": 0,
@@ -33,7 +61,49 @@
                 "x": 190,
                 "y": 49,
                 "w": 190,
+                "h": 45
+            },
+            "rotated": false,
+            "trimmed": false,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        "button03.png": {
+            "frame": {
+                "x": 0,
+                "y": 49,
+                "w": 190,
+                "h": 45
+            },
+            "rotated": false,
+            "trimmed": false,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        "button13.png": {
+            "frame": {
+                "x": 0,
+                "y": 143,
+                "w": 190,
                 "h": 49
+            },
+            "rotated": false,
+            "trimmed": false,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        "circle.png": {
+            "frame": {
+                "x": 386,
+                "y": 174,
+                "w": 36,
+                "h": 36
             },
             "rotated": false,
             "trimmed": false,

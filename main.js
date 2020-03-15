@@ -1,36 +1,50 @@
 // gsap.registerPlugin(MotionPathPlugin);
-
 const _width = 800;
 const _height = 500;
-
-const app = new PIXI.Application({
+const assetRef = "assets/blueSheet.json";
+var gameScene, gameOverScene;
+let options = {
   width: _width,
   height: _height,
   antialias: true,
   backgroundColor: 0xeeeeee,
   resolution: window.devicePixelRatio || 1
-});
+};
+const sprites = {};
+const app = new PIXI.Application(options);
 document.body.appendChild(app.view);
 
-PIXI.loader
-  .add("assets/blueSheet.json")
-  .on("progress", loadProgressHandler)
-  .load(loadSprites);
-
 let game = new Game(_width, _height, app);
-game.start();
-var ticker = game.app.ticker;
+
+PIXI.Loader.shared
+  .add(assetRef)
+  .on("progress", loadProgressHandler)
+  .load(setup);
+
+function setup() {
+  app.ticker.autoStart = false;
+  app.ticker.stop();
+  gameScene = new PIXI.Container();
+  app.stage.addChild(gameScene);
+  gameOverScene = new PIXI.Container();
+  app.stage.addChild(gameOverScene);
+  gameOverScene.visible = false;
+  let message = new PIXI.Text("The End!", {
+    fontFamily: "Futura",
+    fontSize: "64px",
+    fill: "white"
+  });
+  message.x = 120;
+  message.y = app.stage.height / 2 - 32;
+  gameOverScene.addChild(message);
+  game.screen.initSprites();
+  app.ticker.add(delta => game.loop(delta));
+}
 
 /**global functions */
 function loadProgressHandler(loader, resource) {
   console.log("loading: " + resource.url);
   console.log("progress: " + loader.progress + "%");
-}
-function loadSprites() {
-  let id = PIXI.loader.resources["assets/blueSheet.json"].textures;
-  let button0 = new PIXI.Sprite(id["button00.png"]);
-  let button1 = new PIXI.Sprite(id["button01.png"]);
-  app.stage.addChild(button0);
 }
 
 function updateRoute(tile) {
@@ -42,29 +56,30 @@ function setSelection(index) {
   game.menus[2].updateMenu(0, val, false);
   game.selection = index;
 }
+/** ============ */
 
 document.querySelector("body").onload = function() {
   (document.querySelector("#play").onclick = () => {
     // tween.play();
-    ticker.start();
+    app.ticker.start();
   }),
     (document.querySelector("#pause").onclick = () => {
       // tween.pause()
-      ticker.stop();
+      app.ticker.stop();
     });
   document.querySelector("#step").onclick = () => {
     // tween.resume()
-    ticker.stop();
-    ticker.update();
-    ticker.stop();
+    app.ticker.stop();
+    app.ticker.update();
+    app.ticker.stop();
   };
   document.querySelector("#step10").onclick = () => {
     // tween.reverse()
-    ticker.stop();
+    app.ticker.stop();
     for (let i = 0; i < 10; i++) {
-      ticker.update();
+      app.ticker.update();
     }
-    ticker.stop();
+    app.ticker.stop();
   };
   document.querySelector("#restart").onclick = () => {
     // tween.restart()
