@@ -1,11 +1,9 @@
 // gsap.registerPlugin(MotionPathPlugin);
-const _width = 800;
-const _height = 500;
 const assetRef = "assets/blueSheet.json";
-var gameScene, gameOverScene;
+var gameScene, gameOverScene, textureId;
 let options = {
-  width: _width,
-  height: _height,
+  width: _WIDTH,
+  height: _HEIGHT,
   antialias: true,
   backgroundColor: 0xeeeeee,
   resolution: window.devicePixelRatio || 1
@@ -14,34 +12,18 @@ const sprites = {};
 const app = new PIXI.Application(options);
 document.body.appendChild(app.view);
 
-let game = new Game(_width, _height, app);
+let game = new Game(_WIDTH, _HEIGHT, app);
 
 PIXI.Loader.shared
   .add(assetRef)
   .on("progress", loadProgressHandler)
-  .load(setup);
-
-function setup() {
-  app.ticker.autoStart = false;
-  app.ticker.stop();
-  gameScene = new PIXI.Container();
-  app.stage.addChild(gameScene);
-  gameOverScene = new PIXI.Container();
-  app.stage.addChild(gameOverScene);
-  gameOverScene.visible = false;
-  let message = new PIXI.Text("The End!", {
-    fontFamily: "Futura",
-    fontSize: "64px",
-    fill: "white"
-  });
-  message.x = 120;
-  message.y = app.stage.height / 2 - 32;
-  gameOverScene.addChild(message);
-  game.screen.initSprites();
-  app.ticker.add(delta => game.loop(delta));
-}
+  .load(game.setup);
 
 /**global functions */
+function map(n, start1, stop1, start2, stop2) {
+  const newval = ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
+  return newval;
+}
 function loadProgressHandler(loader, resource) {
   console.log("loading: " + resource.url);
   console.log("progress: " + loader.progress + "%");
