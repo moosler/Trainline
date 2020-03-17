@@ -29,15 +29,6 @@ function loadProgressHandler(loader, resource) {
   console.log("progress: " + loader.progress + "%");
 }
 
-function updateRoute(tile) {
-  game.track.updateRoute(tile, game.selection);
-}
-
-function setSelection(index) {
-  let val = MENU_NAMES_RIGHT[index];
-  game.menus[2].updateMenu(0, val, false);
-  game.selection = index;
-}
 /** ============ */
 
 document.querySelector("body").onload = function() {
