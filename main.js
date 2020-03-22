@@ -1,6 +1,6 @@
 // gsap.registerPlugin(MotionPathPlugin);
 const assetRef = "assets/blueSheet.json";
-var gameScene, gameOverScene, textureId;
+var gameScene, endLevelScene, textureId;
 let options = {
   width: _WIDTH,
   height: _HEIGHT,
