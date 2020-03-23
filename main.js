@@ -1,6 +1,10 @@
 // gsap.registerPlugin(MotionPathPlugin);
-const assetRef = "assets/blueSheet.json";
-var gameScene, endLevelScene, textureId;
+const ASSET_REF = "assets/blueSheet.json";
+const MAP1 = "maps/01.json";
+const MAP2 = "maps/02.json";
+var current_map = MAP1;
+
+var textureId;
 let options = {
   width: _WIDTH,
   height: _HEIGHT,
@@ -8,14 +12,14 @@ let options = {
   backgroundColor: 0xeeeeee,
   resolution: window.devicePixelRatio || 1
 };
-const sprites = {};
 const app = new PIXI.Application(options);
 document.body.appendChild(app.view);
 
 let game = new Game(_WIDTH, _HEIGHT, app);
 
 PIXI.Loader.shared
-  .add(assetRef)
+  .add(ASSET_REF)
+  .add(current_map)
   .on("progress", loadProgressHandler)
   .load(game.setup);
 
@@ -40,22 +44,24 @@ document.querySelector("body").onload = function() {
       // tween.pause()
       app.ticker.stop();
     });
-  document.querySelector("#step").onclick = () => {
-    // tween.resume()
-    app.ticker.stop();
-    app.ticker.update();
-    app.ticker.stop();
-  };
-  document.querySelector("#step10").onclick = () => {
-    // tween.reverse()
-    app.ticker.stop();
-    for (let i = 0; i < 10; i++) {
+  if (DEBUG_MODE) {
+    document.querySelector("#step").onclick = () => {
+      // tween.resume()
+      app.ticker.stop();
       app.ticker.update();
-    }
-    app.ticker.stop();
-  };
-  document.querySelector("#restart").onclick = () => {
-    // tween.restart()
-    game.restart();
-  };
+      app.ticker.stop();
+    };
+    document.querySelector("#step10").onclick = () => {
+      // tween.reverse()
+      app.ticker.stop();
+      for (let i = 0; i < 10; i++) {
+        app.ticker.update();
+      }
+      app.ticker.stop();
+    };
+    document.querySelector("#restart").onclick = () => {
+      // tween.restart()
+      game.restart();
+    };
+  }
 };
