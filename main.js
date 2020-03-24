@@ -1,8 +1,6 @@
 // gsap.registerPlugin(MotionPathPlugin);
-const ASSET_REF = "assets/blueSheet.json";
-const MAP1 = "maps/01.json";
-const MAP2 = "maps/02.json";
-var current_map = MAP1;
+
+var current_map = "maps/" + MAPS[0] + ".json";
 
 var textureId;
 let options = {
@@ -59,9 +57,8 @@ document.querySelector("body").onload = function() {
       }
       app.ticker.stop();
     };
-    document.querySelector("#restart").onclick = () => {
-      // tween.restart()
-      game.restart();
+    document.querySelector("#levelEdit").onclick = () => {
+      game.levelEditor();
     };
   }
 };

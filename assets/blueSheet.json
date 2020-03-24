@@ -139,6 +139,20 @@
                 "x": 0.5,
                 "y": 0.5
             }
+        },
+        "sliderRight.png": {
+            "frame": {
+                "x": 378,
+                "y": 143,
+                "w": 39,
+                "h": 31
+            },
+            "rotated": false,
+            "trimmed": false,
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            }
         }
     },
     "meta": {
