@@ -1,6 +1,7 @@
 // gsap.registerPlugin(MotionPathPlugin);
 
-var current_map = "maps/" + MAPS[0] + ".json";
+const START_LEVEL = 0;
+var current_map = "maps/" + MAPS[START_LEVEL] + ".json";
 
 var textureId;
 let options = {
