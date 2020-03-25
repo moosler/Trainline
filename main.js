@@ -37,10 +37,12 @@ function loadProgressHandler(loader, resource) {
 document.querySelector("body").onload = function() {
   (document.querySelector("#play").onclick = () => {
     // tween.play();
+    game.setStatus(1);
     app.ticker.start();
   }),
     (document.querySelector("#pause").onclick = () => {
       // tween.pause()
+      game.status = false;
       app.ticker.stop();
     });
   if (DEBUG_MODE) {
