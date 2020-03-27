@@ -240,6 +240,26 @@
 				"h": 174
 			}
 		},
+		"cactus.png": {
+			"frame": {
+				"x": 2067,
+				"y": 1,
+				"w": 33,
+				"h": 47
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 33,
+				"h": 47
+			},
+			"sourceSize": {
+				"w": 33,
+				"h": 47
+			}
+		},
 		"coin.png": {
 			"frame": {
 				"x": 1874,
@@ -298,6 +318,26 @@
 			"sourceSize": {
 				"w": 486,
 				"h": 148
+			}
+		},
+		"grass.png": {
+			"frame": {
+				"x": 2067,
+				"y": 50,
+				"w": 30,
+				"h": 30
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 30,
+				"h": 30
+			},
+			"sourceSize": {
+				"w": 30,
+				"h": 30
 			}
 		},
 		"health.png": {
@@ -438,6 +478,26 @@
 			"sourceSize": {
 				"w": 231,
 				"h": 231
+			}
+		},
+		"palm.png": {
+			"frame": {
+				"x": 2067,
+				"y": 82,
+				"w": 37,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 37,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 37,
+				"h": 54
 			}
 		},
 		"pause.png": {
@@ -822,7 +882,7 @@
 		},
 		"screen_h.png": {
 			"frame": {
-				"x": 2073,
+				"x": 2106,
 				"y": 1,
 				"w": 1050,
 				"h": 844
@@ -960,6 +1020,26 @@
 				"h": 177
 			}
 		},
+		"stump.png": {
+			"frame": {
+				"x": 200,
+				"y": 847,
+				"w": 33,
+				"h": 29
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 33,
+				"h": 29
+			},
+			"sourceSize": {
+				"w": 33,
+				"h": 29
+			}
+		},
 		"three_stars.png": {
 			"frame": {
 				"x": 581,
@@ -998,6 +1078,26 @@
 			"sourceSize": {
 				"w": 501,
 				"h": 361
+			}
+		},
+		"tree_small.png": {
+			"frame": {
+				"x": 235,
+				"y": 847,
+				"w": 58,
+				"h": 71
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 58,
+				"h": 71
+			},
+			"sourceSize": {
+				"w": 58,
+				"h": 71
 			}
 		}
 	},

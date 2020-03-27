@@ -1,7 +1,6 @@
 // gsap.registerPlugin(MotionPathPlugin);
 
-const START_LEVEL = 0;
-var current_map = "maps/" + MAPS[START_LEVEL] + ".json";
+var current_map = "maps/" + MAPS[0] + ".json";
 
 var textureId;
 let options = {
@@ -22,6 +21,9 @@ PIXI.Loader.shared
   .on("progress", loadProgressHandler)
   .load(game.setup);
 
+function test() {
+  console.log("sfd");
+}
 /**global functions */
 function map(n, start1, stop1, start2, stop2) {
   const newval = ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
