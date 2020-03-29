@@ -31,6 +31,8 @@ function loadProgressHandler(loader, resource) {
   console.log("progress: " + loader.progress + "%");
 }
 
+/**no right click */
+document.addEventListener("contextmenu", event => event.preventDefault());
 /** ============ */
 
 document.querySelector("body").onload = function() {
