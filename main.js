@@ -15,15 +15,12 @@ document.body.appendChild(app.view);
 
 let game = new Game(_WIDTH, _HEIGHT, app);
 
-PIXI.Loader.shared
+app.loader
   .add(ASSET_REF)
-  .add(current_map)
+  // .add(current_map)
   .on("progress", loadProgressHandler)
   .load(game.setup);
 
-function test() {
-  console.log("sfd");
-}
 /**global functions */
 function map(n, start1, stop1, start2, stop2) {
   const newval = ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
@@ -63,7 +60,7 @@ document.querySelector("body").onload = function() {
       app.ticker.stop();
     };
     document.querySelector("#levelEdit").onclick = () => {
-      game.levelEditor();
+      game.setStatus(3);
     };
   }
 };
