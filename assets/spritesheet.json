@@ -200,6 +200,26 @@
 				"h": 231
 			}
 		},
+		"blank_tile.png": {
+			"frame": {
+				"x": 2149,
+				"y": 1,
+				"w": 25,
+				"h": 25
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 25,
+				"h": 25
+			},
+			"sourceSize": {
+				"w": 25,
+				"h": 25
+			}
+		},
 		"button.png": {
 			"frame": {
 				"x": 234,
@@ -262,7 +282,7 @@
 		},
 		"cactus.png": {
 			"frame": {
-				"x": 2149,
+				"x": 2176,
 				"y": 1,
 				"w": 33,
 				"h": 47
@@ -342,7 +362,7 @@
 		},
 		"grass.png": {
 			"frame": {
-				"x": 2184,
+				"x": 2211,
 				"y": 1,
 				"w": 30,
 				"h": 30
@@ -502,8 +522,8 @@
 		},
 		"palm.png": {
 			"frame": {
-				"x": 2216,
-				"y": 1,
+				"x": 2211,
+				"y": 33,
 				"w": 37,
 				"h": 54
 			},
@@ -942,7 +962,7 @@
 		},
 		"screen_h.png": {
 			"frame": {
-				"x": 2255,
+				"x": 2250,
 				"y": 1,
 				"w": 1050,
 				"h": 844
@@ -1080,6 +1100,26 @@
 				"h": 177
 			}
 		},
+		"station.png": {
+			"frame": {
+				"x": 2068,
+				"y": 847,
+				"w": 87,
+				"h": 104
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 87,
+				"h": 104
+			},
+			"sourceSize": {
+				"w": 87,
+				"h": 104
+			}
+		},
 		"stump.png": {
 			"frame": {
 				"x": 886,
@@ -1142,7 +1182,7 @@
 		},
 		"tree_small.png": {
 			"frame": {
-				"x": 2068,
+				"x": 2157,
 				"y": 847,
 				"w": 58,
 				"h": 71
@@ -1167,7 +1207,7 @@
 		"image": "spritesheet.png",
 		"format": "RGBA8888",
 		"size": {
-			"w": 3306,
+			"w": 3301,
 			"h": 2310
 		},
 		"scale": "1"
