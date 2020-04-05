@@ -1,7 +1,5 @@
 // gsap.registerPlugin(MotionPathPlugin);
 
-var current_map = "maps/" + MAPS[0] + ".json";
-
 var textureId;
 let options = {
   width: _WIDTH,
@@ -35,7 +33,7 @@ function loadProgressHandler(loader, resource) {
 document.addEventListener("contextmenu", event => event.preventDefault());
 /** ============ */
 
-document.querySelector("body").onload = function() {
+document.querySelector("body").onload = function () {
   (document.querySelector("#play").onclick = () => {
     // tween.play();
     game.setStatus(1);
