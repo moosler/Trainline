@@ -33,36 +33,36 @@ function loadProgressHandler(loader, resource) {
 document.addEventListener("contextmenu", event => event.preventDefault());
 /** ============ */
 
-document.querySelector("body").onload = function () {
-  (document.querySelector("#play").onclick = () => {
-    // tween.play();
-    game.setStatus(1);
-    // app.ticker.start();
-  }),
-    (document.querySelector("#pause").onclick = () => {
-      // tween.pause()
-      game.setStatus();
-      app.ticker.stop();
-    });
-  if (DEBUG_MODE) {
-    document.querySelector("#step").onclick = () => {
-      // tween.resume()
-      app.ticker.stop();
-      app.ticker.update();
-      game.setStatus(1);
-      app.ticker.stop();
-    };
-    document.querySelector("#step10").onclick = () => {
-      // tween.reverse()
-      app.ticker.stop();
-      for (let i = 0; i < 10; i++) {
-        app.ticker.update();
-      }
-      game.setStatus(1);
-      app.ticker.stop();
-    };
-    document.querySelector("#levelEdit").onclick = () => {
-      game.setStatus(3);
-    };
-  }
-};
+// document.querySelector("body").onload = function () {
+//   (document.querySelector("#play").onclick = () => {
+//     // tween.play();
+//     game.setStatus(1);
+//     // app.ticker.start();
+//   }),
+//     (document.querySelector("#pause").onclick = () => {
+//       // tween.pause()
+//       game.setStatus();
+//       app.ticker.stop();
+//     });
+//   if (DEBUG_MODE) {
+//     document.querySelector("#step").onclick = () => {
+//       // tween.resume()
+//       app.ticker.stop();
+//       app.ticker.update();
+//       game.setStatus(1);
+//       app.ticker.stop();
+//     };
+//     document.querySelector("#step10").onclick = () => {
+//       // tween.reverse()
+//       app.ticker.stop();
+//       for (let i = 0; i < 10; i++) {
+//         app.ticker.update();
+//       }
+//       game.setStatus(1);
+//       app.ticker.stop();
+//     };
+//     document.querySelector("#levelEdit").onclick = () => {
+//       game.setStatus(3);
+//     };
+//   }
+// };
