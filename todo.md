@@ -3,5 +3,8 @@
 - add an start scene
 - use webpack
 - use babel
-- show popup Info by hovering the buttons
-- run procedural map generator after level 5
+- bug by Calc track/calcRailBefore for seeds; 4,8,15,16,...
+- bug by seeds:
+
+* 18 blue station is not connetable
+* 5,10,21 switch Orientation is not working
